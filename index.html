@@ -61,8 +61,10 @@
                     <p>
                         O Chronos Pomodoro é capaz de te ajudar a focar nas tarefas utilizando a tecnica de Pomodoro. Tecnica essa que busca dividir o tempo de foco em pequenas partes. 
                     </p>
-                    <a href="https://chronos-pomodoro-ebon.vercel.app/" target="_blank">Clique para ver o site</a>
-                    <a href="https://github.com/CristianSbarboza/chronos-pomodoro" target="_blank">Clique para ver o repositório</a>
+                    <div class="container-links-project">
+                        <a href="https://chronos-pomodoro-ebon.vercel.app/" target="_blank">Clique para ver o site</a>
+                        <a href="https://github.com/CristianSbarboza/chronos-pomodoro" target="_blank">Clique para ver o repositório</a>
+                    </div>
                 </div>
             </div>
 
@@ -73,10 +75,12 @@
                 <div class="card-content">
                     <h3>Naia</h3>
                     <p>
-                        Naia é uma criadora de história interativa. Seu objetivo é auxiliar escritores iniciantes a começar suas histórias. Ela foi criada para participar do Hackathon do Google Chrome, utilizando IAs integradas diretas do navegador. Caso queria testar precisará ler o Reade.me no Github 
+                        Naia é uma criadora de história interativa. Seu objetivo é auxiliar escritores iniciantes a começar suas histórias. Ela foi criada para participar do Hackathon do Google Chrome, utilizando IAs integradas diretas do navegador. Caso queira testar precisará ler o Reade.me no Github 
                     </p>
-                    <a href="https://naia-two.vercel.app/" target="_blank">Clique para ver o site</a>
-                    <a href="https://github.com/CristianSbarboza/naia" target="_blank">Clique para ver o repositório</a>
+                    <div class="container-links-project">
+                        <a href="https://naia-two.vercel.app/" target="_blank">Clique para ver o site</a>
+                        <a href="https://github.com/CristianSbarboza/naia" target="_blank">Clique para ver o repositório</a>
+                    </div>
                 </div>
             </div>
             
@@ -89,8 +93,10 @@
                     <p>
                         Chega de se perder em suas anotações. Com o NoteFlow você terá um app simples, compacto e organizado, fazendo com que suas anotações fique organizadas por tópicos
                     </p>
-                    <a href="https://noteflow-u68p.onrender.com" target="_blank">Clique para ver o site</a>
-                    <a href="https://github.com/CristianSbarboza/NoteFlow">Clique para ver o repositório</a>
+                    <div class="container-links-project">
+                        <a href="https://noteflow-u68p.onrender.com" target="_blank">Clique para ver o site</a>
+                        <a href="https://github.com/CristianSbarboza/NoteFlow">Clique para ver o repositório</a>
+                    </div>
                 </div>
             </div>
 
@@ -101,10 +107,13 @@
                 <div class="card-content">
                     <h3>Portifólio</h3>
                     <p>
-                        Esse é o projeto que você mais conhece de minha autoria rsrs. Eespero que esteja gostando de biajar por eele
+                        Esse é o projeto que você mais conhece de minha autoria rsrs. Espero que esteja gostando de viajar por ele
                     </p>
-                    <a href="#" target="_blank">Clique para ver o site</a>
-                    <a href="#" target="_blank">Clique para ver o repositório</a>
+                    <div class="container-links-project">
+
+                        <a href="https://portfolio-six-eosin-80.vercel.app/" target="_blank">Clique para ver o site</a>
+                        <a href="https://github.com/CristianSbarboza/portfolio" target="_blank">Clique para ver o repositório</a>
+                    </div>
                 </div>
             </div>
 
@@ -113,11 +122,15 @@
                     <video src="https://github.com/CristianSbarboza/portfolio/releases/download/v1.0.0/backAcount.mp4" class="img-card" autoplay muted loop></video>
                 </div>
                 <div class="card-content">
+                    <h3>
+                        Bank account simulator
+                    </h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, quidem!
+                        Sistema de simulação de conta bancaria. Trabalhei bastante na logica para ocorrer tudo como deveria
                     </p>
-                    <a href="#">Clique para ver o site</a>
-                    <a href="#">Clique para ver o repositório</a>
+                    <div class="container-links-project">
+                        <a href="https://github.com/CristianSbarboza/Bank-Account-with-NodeJS" target="_blank">Clique para ver o repositório</a>
+                    </div>
                 </div>
             </div>
 
@@ -166,7 +179,7 @@
                             <li> metodologia agil(Scrun, Kanbam, XP)</li> 
                             <li>linguagem de programação(Python, JavaScript e TypeScript)</li> 
                             <li>Freameworks(React, Next, Django, NodeJS)</li> 
-                            <li> Banco de Dados relacional</li>
+                            <li> Banco de Dados relacional (PostgreSQL e MySQL)</li>
                         </ul>
                     </div>
                 </div>
@@ -235,20 +248,25 @@
         <div class="contact-container appear">
             <h2 class="rainbow-text">Entre em Contato</h2>
 
-            <form class="contact-form appear">
+            <form class="contact-form appear" action="https://formsubmit.co/cristianbsmdigital@gmail.com" method="POST">
                 <div class="form-group">
                     <label for="name">Nome</label>
-                    <input type="text" id="name" required>
+                    <input type="text" id="name" name="name" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" required>
+                    <input type="email" id="email" name="email" required>
                 </div>
 
                 <div class="form-group">
                     <label for="message">Mensagem</label>
                     <textarea id="message" required></textarea>
+                </div>
+
+                <div>
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
                 </div>
 
                 <button type="submit" class="btn-send">Enviar</button>

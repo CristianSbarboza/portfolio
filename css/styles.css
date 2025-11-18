@@ -181,7 +181,7 @@ section.well-come img#mountains_front{
     gap: 1em;
     will-change: transform;
 
-    background: rgba(9, 69, 233, 0.05);
+    background: rgba(26, 25, 25, 0.747);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 1rem;
@@ -209,14 +209,23 @@ section.well-come img#mountains_front{
 
 .card-content{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
 }
 
 .card-content p{
-    text-align: center;
+    margin-top: 4px;
     color: #fff;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.25;
+}
+
+.container-links-project{
+    display: flex;
+    justify-content: space-between;
 }
 
 .card-content a {
@@ -690,6 +699,266 @@ textarea {
         width: 375px;
         height: 500px;
         
+    }
+}
+
+/* =============================
+   RESPONSIVO GERAL (até 1200px)
+============================= */
+@media (max-width: 1200px) {
+
+    #text {
+        font-size: 6vw;
+        right: -200px;
+    }
+
+    .perfil-card {
+        width: 430px;
+    }
+
+    .resun {
+        width: 50%;
+    }
+
+}
+
+
+/* =============================
+   ATÉ 990px (tablet grande)
+============================= */
+@media (max-width: 990px) {
+
+    header {
+        padding: 20px 40px;
+    }
+
+    header .logo {
+        font-size: 1.6em;
+    }
+
+    .cards {
+        top: 32%;
+        height: auto;
+    }
+
+    .card {
+        width: 80%;
+        height: auto;
+        left: 50%;
+        margin-left: -40%;
+    }
+
+    #aboult {
+        flex-direction: column;
+        gap: 3rem;
+        height: auto;
+        padding: 80px 20px;
+    }
+
+    .perfil-card {
+        width: 70%;
+    }
+
+    .resun {
+        width: 80%;
+        padding: 5%;
+    }
+
+    .imgs-tecs-container .imgs-tecs {
+        gap: 30px;
+    }
+
+    .img-tecs {
+        width: 8vw;
+        height: 8vw;
+    }
+}
+
+
+/* =============================
+   ATÉ 768px (tablet / mobile grande)
+============================= */
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 30px;
+    }
+
+    header ul li a {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    #text {
+        font-size: 10vw;
+        right: -120px;
+    }
+
+    #mainBtn {
+        padding: 6px 20px;
+        font-size: 1.1em;
+    }
+
+    .card {
+        width: 90%;
+        margin-left: -45%;
+    }
+
+    .perfil-card {
+        width: 85%;
+    }
+
+    #contact {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .contact-container {
+        padding: 30px 25px;
+    }
+
+    .contact-container h2 {
+        font-size: 32px;
+    }
+
+    .img-tecs {
+        width: 10vw;
+        height: 10vw;
+    }
+}
+
+
+/* =============================
+   ATÉ 600px (celular)
+============================= */
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px 20px;
+    }
+
+    header .logo {
+        font-size: 1.3em;
+    }
+
+    header ul {
+        gap: 5px;
+    }
+
+    section.well-come {
+        padding: 40px;
+    }
+
+    #text {
+        font-size: 12vw;
+        right: -80px;
+    }
+
+    .card {
+        width: 95%;
+        margin-left: -47.5%;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+    .perfil-img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .perfil-card {
+        width: 92%;
+        padding: 1.2rem;
+    }
+
+    .resun {
+        width: 90%;
+        padding: 8%;
+    }
+
+    .imgs-tecs-container .imgs-tecs {
+        animation-duration: 16s;
+    }
+
+    .img-tecs {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .contact-container h2 {
+        font-size: 28px;
+    }
+
+    .btn-send {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+
+    #footer {
+        padding: 40px 15px;
+    }
+
+    .footer-left h3 {
+        font-size: 22px;
+    }
+
+    .footer-copy p {
+        font-size: 12px;
+    }
+}
+
+
+/* =============================
+   ATÉ 420px (mobile pequeno)
+============================= */
+@media (max-width: 420px) {
+
+    header {
+        padding: 10px 15px;
+    }
+
+    header .logo {
+        font-size: 1em;
+    }
+
+    header ul li a {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    #text {
+        font-size: 14vw;
+        right: -40px;
+    }
+
+    #mainBtn {
+        font-size: 1em;
+        padding: 5px 15px;
+    }
+
+    .card {
+        height: auto;
+        gap: .5rem;
+    }
+
+    .perfil-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .contact-container {
+        padding: 20px;
+    }
+
+    .img-tecs {
+        width: 14vw;
+        height: 14vw;
+    }
+
+    .footer-social {
+        gap: 10px;
     }
 }
 
