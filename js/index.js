@@ -23,6 +23,13 @@ navBtns.forEach(btn => {
 window.addEventListener('scroll', function(){
     let valueScroll = window.scrollY
 
+    if (window.innerWidth > 768) {
+        let valueScroll = window.scrollY
+        // ... seu código de parallax existente ...
+        text.style.marginRight = valueScroll * 4 + 'px'
+        // ... resto do código ...
+    }
+
     stars.style.left = valueScroll * 0.25 + 'px'
     moon.style.top = valueScroll * 1.05 + 'px'
     mountains_behind.style.top = valueScroll * 0.5 + 'px'
