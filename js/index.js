@@ -21,28 +21,33 @@ navBtns.forEach(btn => {
 
 
 window.addEventListener('scroll', function(){
-    let valueScroll = window.scrollY
-
-    if (window.innerWidth > 768) {
-        let valueScroll = window.scrollY
-        // ... seu código de parallax existente ...
-        text.style.marginRight = valueScroll * 4 + 'px'
-        // ... resto do código ...
+    let valueScroll = window.scrollY;
+    
+    // Define multipliers based on screen width
+    // Desktop: 1.0, Mobile/Tablet: 0.5 (or adjusted per element)
+    let isMobile = window.innerWidth <= 768;
+    let multiplier = isMobile ? 0.5 : 1.0;
+    
+    // Parallax Effects
+    stars.style.left = valueScroll * 0.25 * multiplier + 'px';
+    moon.style.top = valueScroll * 1.05 * multiplier + 'px';
+    mountains_behind.style.top = valueScroll * 0.5 * multiplier + 'px';
+    mountains_front.style.top = valueScroll * 0 + 'px'; // Front stays fixed relative to scroll usually, or moves 0
+    
+    // Text moves to the right. On mobile, we reduce this significantly to keep it visible longer/prevent overflow
+    // Desktop: valueScroll * 4
+    // Mobile: valueScroll * 1.5 (slower movement)
+    let textSpeed = isMobile ? 1.5 : 4;
+    text.style.marginRight = valueScroll * textSpeed + 'px';
+    
+    text.style.marginTop = valueScroll * 1.5 * multiplier + 'px';
+    mainBtn.style.marginTop = valueScroll * 1.5 * multiplier + 'px';
+    
+    // Header parallax only on desktop
+    if (!isMobile) {
+        header.style.left = valueScroll * 0.5 + 'px';
     }
 
-    stars.style.left = valueScroll * 0.25 + 'px'
-    moon.style.top = valueScroll * 1.05 + 'px'
-    mountains_behind.style.top = valueScroll * 0.5 + 'px'
-    mountains_front.style.top = valueScroll * 0 + 'px'
-    text.style.marginRight = valueScroll * 4 + 'px'
-    text.style.marginTop = valueScroll * 1.5 + 'px'
-    mainBtn.style.marginTop = valueScroll * 1.5 + 'px'
-    header.style.left = valueScroll * 0.5 + 'px'
-
-    h1s.forEach((h1)=>{
-        h1.style.opacity = valueScroll / 1000
-        if(h1.style.opacity > 1) h1.style.opacity = 1
-    })
 
 })
 
@@ -123,7 +128,9 @@ document.addEventListener('DOMContentLoaded', () =>{
 
                 currentCardIndex = cardIndex
 
-                const targetY = 150 - currentCardIndex * 150
+                const stepHeight = document.querySelector('.project-title').offsetHeight;
+                const targetY = -currentCardIndex * stepHeight;
+                
                 gsap.to(countContainer, {
                     y: targetY,
                     duration: 0.3,
